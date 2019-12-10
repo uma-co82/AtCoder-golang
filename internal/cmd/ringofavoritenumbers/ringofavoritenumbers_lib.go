@@ -19,11 +19,11 @@ func Of(valueOfD, valueOfN int) (float64, error) {
 }
 
 func argumentValidate(valueOfD, valueOfN int) error {
-	if !(0 <= valueOfD) && !(valueOfD <= 2) {
+	if !(0 <= valueOfD) || !(valueOfD <= 2) {
 		return pkg.NewError("Dには0,1,2いずれかの値を入力して下さい")
 	}
 
-	if !(0 <= valueOfN) && !(valueOfN <= 100) {
+	if !(1 <= valueOfN) || !(valueOfN <= 100) {
 		return pkg.NewError("Nには1以上100以下の値を入力して下さい")
 	}
 
