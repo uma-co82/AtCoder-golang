@@ -4,9 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/uma-co82/AtCoder-golang/internal/happyBirthday"
-
 	"github.com/uma-co82/AtCoder-golang/pkg"
+	"github.com/uma-co82/AtCoder-golang/pkg/cmd/happybirthday"
 )
 
 func main() {
@@ -17,5 +16,5 @@ func main() {
 		return
 	}
 
-	happyBirthday.Of(numbers[0], numbers[1])
+	happybirthday.Of(numbers[0], numbers[1])
 }
