@@ -10,10 +10,8 @@ func Of(valueOfN int, valueOfA []int) (int, error) {
 	operationCount := 0
 
 	for i := 0; i < valueOfN; i++ {
-		quotient, remainder := divisionBy2(valueOfA[i])
-		if remainder == 0 {
-			operationCount = operationCount + quotient
-		}
+		quotient := divisionBy2(valueOfA[i])
+		operationCount = operationCount + quotient
 	}
 
 	return operationCount, nil
