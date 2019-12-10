@@ -30,5 +30,6 @@ jobs:
     - name: Build
       run: |
         cd cmd
+        ls
         cd happybirthday
         go build -v .
