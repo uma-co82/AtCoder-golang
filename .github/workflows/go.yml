@@ -29,5 +29,6 @@ jobs:
         fi
     - name: Build
       run: |
-        cd cmd/happybirthday
+        cd cmd
+        cd happybirthday
         go build -v .
