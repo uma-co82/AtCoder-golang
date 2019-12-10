@@ -37,12 +37,20 @@ func argumentValidate(valueOfN int, valueOfA []int) error {
 	return nil
 }
 
-func divisionBy2(numerator int) (int, int) {
+func divisionBy2(numerator int) int {
 	hoge := numerator
+	tmp := 0
 	count := 0
 
 	for hoge%2 == 0 {
 		hoge = hoge / 2
+		tmp = hoge % 2
 		count++
 	}
+
+	if tmp != 0 {
+		count--
+	}
+
+	return count
 }
