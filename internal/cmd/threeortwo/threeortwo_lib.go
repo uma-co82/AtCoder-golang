@@ -1,6 +1,8 @@
 package threeortwo
 
-import "github.com/uma-co82/AtCoder-golang/pkg"
+import (
+	"github.com/uma-co82/AtCoder-golang/pkg"
+)
 
 func Of(valueOfN int, valueOfA []int) (int, error) {
 	if err := argumentValidate(valueOfN, valueOfA); err != nil {
@@ -10,7 +12,7 @@ func Of(valueOfN int, valueOfA []int) (int, error) {
 	operationCount := 0
 
 	for i := 0; i < valueOfN; i++ {
-		quotient := divisionBy2(valueOfA[i])
+		quotient := countDivisionBy2(valueOfA[i])
 		operationCount = operationCount + quotient
 	}
 
@@ -35,19 +37,13 @@ func argumentValidate(valueOfN int, valueOfA []int) error {
 	return nil
 }
 
-func divisionBy2(numerator int) int {
-	hoge := numerator
-	tmp := 0
+func countDivisionBy2(numerator int) int {
+	n := numerator
 	count := 0
 
-	for hoge%2 == 0 {
-		hoge = hoge / 2
-		tmp = hoge % 2
+	for n%2 == 0 {
+		n = n / 2
 		count++
-	}
-
-	if tmp != 0 {
-		count--
 	}
 
 	return count
