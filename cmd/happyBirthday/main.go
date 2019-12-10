@@ -10,7 +10,7 @@ import (
 
 func main() {
 	args := os.Args[1:]
-	numbers, err := pkg.ArgumentValidate(args)
+	numbers, err := pkg.ArgumentValidate(args, 2)
 	if err != nil {
 		fmt.Println(err.Error())
 		return
