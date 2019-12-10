@@ -29,7 +29,5 @@ jobs:
         fi
     - name: Build
       run: |
-        cd cmd
-        ls
-        cd happybirthday
-        go build -v .
+        go build -v cmd/happybirthday
+        go build -v cmd/ringofavoritenumbers
