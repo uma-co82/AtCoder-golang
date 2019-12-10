@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
+	"../../internal/cmd/happybirthday"
 	"github.com/uma-co82/AtCoder-golang/pkg"
-	"github.com/uma-co82/AtCoder-golang/pkg/cmd/happybirthday"
 )
 
 func main() {
