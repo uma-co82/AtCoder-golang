@@ -4,34 +4,18 @@ import (
 	"github.com/uma-co82/AtCoder-golang/pkg"
 )
 
-type numberOfCakes struct {
-	valueOfA int
-	valueOfB int
-}
+const TOTAL_CAKE_PIECES = 16
 
-const totalCakes = 16
-
-func NewNumberOfCakes(valueOfA, valueOfB int) (*numberOfCakes, error) {
-	if valueOfA+valueOfB > totalCakes {
+func NewNumberOfCakes(valueOfA, valueOfB int) error {
+	if valueOfA+valueOfB > TOTAL_CAKE_PIECES {
 		err := pkg.NewError("総数を16以下にして下さい")
-		return nil, err
+		return err
 	}
 
 	if valueOfA >= 9 || valueOfB >= 9 {
 		err := pkg.NewError(":(")
-		return nil, err
+		return err
 	}
 
-	return &numberOfCakes{
-		valueOfA: valueOfA,
-		valueOfB: valueOfB,
-	}, nil
-}
-
-func (numberOfCakes *numberOfCakes) GetValueOfA() int {
-	return numberOfCakes.valueOfA
-}
-
-func (numberOfCakes *numberOfCakes) GetValueOfB() int {
-	return numberOfCakes.valueOfB
+	return nil
 }
