@@ -16,7 +16,7 @@ func Of(valueOfN, valueOfM int64, valueOfA []int64) error {
 	tmp := []int64{}
 
 	for _, n := range valueOfA {
-		tmp = append(tmp, int64(math.Abs(float64(n))))
+		tmp = append(tmp, n)
 
 		if len(tmp) == 3 {
 			hoge = append(hoge, tmp)
@@ -34,16 +34,20 @@ func Of(valueOfN, valueOfM int64, valueOfA []int64) error {
 		result = append(result, total)
 	}
 
+	fmt.Println(result)
+
 	sort.Slice(result, func(i, j int) bool {
-		return result[i] < result[j]
+		return result[i] > result[j]
 	})
+
+	fmt.Println(result)
 
 	answer := result[:3]
 
 	var total int64
 
 	for _, n := range answer {
-		total = total + n
+		total = total + int64(math.Abs(float64(n)))
 	}
 
 	fmt.Println(total)

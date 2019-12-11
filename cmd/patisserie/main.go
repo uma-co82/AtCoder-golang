@@ -1,14 +1,28 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"strconv"
 
+	"../../internal/cmd/patisserie"
 	"github.com/uma-co82/AtCoder-golang/pkg"
 )
 
 func main() {
 	args := os.Args[1:]
+	numbers, err := argumentValidate(args)
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+	valueOfN := numbers[0]
+	valueOfM := numbers[1]
+	result := numbers[2:]
+
+	if err := patisserie.Of(valueOfN, valueOfM, result); err != nil {
+		fmt.Println(err.Error())
+	}
 }
 
 /**
