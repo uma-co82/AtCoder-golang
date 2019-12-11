@@ -3,6 +3,17 @@ package patisserie
 import "github.com/uma-co82/AtCoder-golang/pkg"
 
 func Of(valueOfN, valueOfM int, valueOfA []int64) {
+	hoge := [][]int64{}
+
+	for _, n := range valueOfA {
+		tmp := []int64{}
+
+		if len(tmp) == 3 {
+			hoge = append(hoge, tmp)
+			continue
+		}
+		tmp = append(tmp, n)
+	}
 }
 
 func argumentValidate(valueOfN, valueOfM int, valueOfA []int64) error {
