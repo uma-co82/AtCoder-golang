@@ -1,8 +1,14 @@
 package patisserie
 
-import "github.com/uma-co82/AtCoder-golang/pkg"
+import (
+	"fmt"
+	"math"
+	"sort"
 
-func Of(valueOfN, valueOfM int, valueOfA []int64) error {
+	"github.com/uma-co82/AtCoder-golang/pkg"
+)
+
+func Of(valueOfN, valueOfM int64, valueOfA []int64) error {
 	if err := argumentValidate(valueOfN, valueOfM, valueOfA); err != nil {
 		return err
 	}
@@ -10,19 +16,42 @@ func Of(valueOfN, valueOfM int, valueOfA []int64) error {
 	tmp := []int64{}
 
 	for _, n := range valueOfA {
+		tmp = append(tmp, int64(math.Abs(float64(n))))
 
-		tmp = append(tmp, n)
 		if len(tmp) == 3 {
 			hoge = append(hoge, tmp)
 			tmp = []int64{}
 		}
 	}
 
+	result := []int64{}
+
+	for _, n := range hoge {
+		var total int64
+		for _, m := range n {
+			total = total + m
+		}
+		result = append(result, total)
+	}
+
+	sort.Slice(result, func(i, j int) bool {
+		return result[i] < result[j]
+	})
+
+	answer := result[:3]
+
+	var total int64
+
+	for _, n := range answer {
+		total = total + n
+	}
+
+	fmt.Println(total)
 	return nil
 }
 
-func argumentValidate(valueOfN, valueOfM int, valueOfA []int64) error {
-	if len(valueOfA)/3 != valueOfN {
+func argumentValidate(valueOfN, valueOfM int64, valueOfA []int64) error {
+	if int64(len(valueOfA)/3) != valueOfN {
 		return pkg.NewError("Nと種類の数が違うので演算が行えません")
 	}
 

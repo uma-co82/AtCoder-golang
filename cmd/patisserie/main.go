@@ -1,24 +1,21 @@
 package main
 
 import (
-	"fmt"
+	"os"
 	"strconv"
 
 	"github.com/uma-co82/AtCoder-golang/pkg"
 )
 
 func main() {
+	args := os.Args[1:]
 }
 
 /**
- * 引数がint型か規定数以上与えられたか判定する
+ * 引数がint型判定する
  */
-func ArgumentValidate(args []string, argsCount int) ([]int, error) {
-	var numbers []int
-
-	if len(args) < argsCount {
-		return nil, pkg.NewError(fmt.Sprintf("引数が足りません%d個入力して下さい", argsCount))
-	}
+func argumentValidate(args []string) ([]int64, error) {
+	var numbers []int64
 
 	for _, val := range args {
 		num, ok := strconv.Atoi(val)
@@ -26,7 +23,8 @@ func ArgumentValidate(args []string, argsCount int) ([]int, error) {
 			err := pkg.NewError("引数は整数値のみ有効です")
 			return nil, err
 		}
-		numbers = append(numbers, num)
+		tmp := int64(num)
+		numbers = append(numbers, tmp)
 	}
 	return numbers, nil
 }
