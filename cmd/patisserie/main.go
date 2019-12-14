@@ -5,8 +5,8 @@ import (
 	"os"
 	"strconv"
 
-	"../../internal/cmd/patisserie"
 	"github.com/uma-co82/AtCoder-golang/pkg"
+	"github.com/uma-co82/AtCoder-golang/pkg/cmd/patisserie"
 )
 
 func main() {

@@ -5,8 +5,8 @@ import (
 	"os"
 	"strconv"
 
-	"../../internal/cmd/threeortwo"
 	"github.com/uma-co82/AtCoder-golang/pkg"
+	"github.com/uma-co82/AtCoder-golang/pkg/cmd/threeortwo"
 )
 
 func main() {
@@ -33,7 +33,7 @@ func argumentValidate(args []string) ([]int, error) {
 		err := pkg.NewError("引数を入力して下さい")
 		return nil, err
 	}
-	
+
 	for _, val := range args {
 		num, ok := strconv.Atoi(val)
 		if ok != nil {

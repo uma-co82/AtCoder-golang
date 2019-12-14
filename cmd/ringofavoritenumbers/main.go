@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"../../internal/cmd/ringofavoritenumbers"
 	"github.com/uma-co82/AtCoder-golang/pkg"
+	"github.com/uma-co82/AtCoder-golang/pkg/cmd/ringofavoritenumbers"
 )
 
 func main() {
