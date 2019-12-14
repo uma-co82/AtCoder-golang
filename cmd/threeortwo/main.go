@@ -29,6 +29,11 @@ func main() {
 func argumentValidate(args []string) ([]int, error) {
 	var numbers []int
 
+	if len(args) <= 0 {
+		err := pkg.NewError("引数を入力して下さい")
+		return nil, err
+	}
+	
 	for _, val := range args {
 		num, ok := strconv.Atoi(val)
 		if ok != nil {

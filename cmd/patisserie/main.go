@@ -26,15 +26,20 @@ func main() {
 }
 
 /**
- * 引数がint型判定する
+ * 引数がint型か判定する
  */
 func argumentValidate(args []string) ([]int64, error) {
 	var numbers []int64
 
+	if len(args) <= 0 {
+		err := pkg.NewError("引数を入力して下さい")
+		return nil, err
+	}
+
 	for _, val := range args {
 		num, ok := strconv.Atoi(val)
 		if ok != nil {
-			err := pkg.NewError("引数は整数値のみ有効です")
+			err := pkg.NewError("引数は数値のみ有効です")
 			return nil, err
 		}
 		tmp := int64(num)
