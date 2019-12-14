@@ -1,15 +1,14 @@
 # AtCoder-golang  ([abc100](https://atcoder.jp/contests/abc100/tasks)-answers)
 
 ### Set Up
-＊ 「go version go1.13.4 darwin/amd64」 confirms operation.
+＊ 「go version go1.13.4」 confirms operation.
 
 1. go get this repo
-
-＊ At this time, it is said that 「package github.com/uma-co82/AtCoder-golang: no Go files in...」 , but it can be ignored.
 
 ```shell
 go get -u github.com/uma-co82/AtCoder-golang
 ```
+＊ At this time, it is said that 「package github.com/uma-co82/AtCoder-golang: no Go files in...」 , but it can be ignored.
 
 ### [Happy Birthday!](https://atcoder.jp/contests/abc100/tasks/abc100_a)
 
