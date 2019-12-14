@@ -1,7 +1,8 @@
 FROM golang:latest
 
-COPY . /
+COPY ./entrypoint.sh /entrypoint.sh
 
-WORKDIR /
+RUN go get -u github.com/uma-co82/AtCoder-golang && \
+    chmod 777 /entrypoint.sh
 
-CMD [""]
+ENTRYPOINT ["/entrypoint.sh"]
