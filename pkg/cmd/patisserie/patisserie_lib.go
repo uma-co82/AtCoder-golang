@@ -66,7 +66,7 @@ func Of(valueOfN, valueOfM int64, valueOfA []int64) error {
 
 	descendingOrder(answer)
 
-	fmt.Printf("A: %d", answer[0])
+	fmt.Printf("A: %d \n", answer[0])
 
 	return nil
 }

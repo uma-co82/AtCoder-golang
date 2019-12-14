@@ -21,5 +21,5 @@ func main() {
 		fmt.Println(err.Error())
 		return
 	}
-	fmt.Printf("A: %d", int(answer))
+	fmt.Printf("A: %d \n", int(answer))
 }

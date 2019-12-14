@@ -23,7 +23,7 @@ func main() {
 		return
 	}
 
-	fmt.Printf("A: %d", answer)
+	fmt.Printf("A: %d \n", answer)
 }
 
 func argumentValidate(args []string) ([]int, error) {
