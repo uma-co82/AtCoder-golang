@@ -32,3 +32,4 @@ jobs:
         go build -v ./cmd/happybirthday
         go build -v ./cmd/ringofavoritenumbers
         go build -v ./cmd/threeortwo
+        go build -v ./cmd/patisserie
