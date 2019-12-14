@@ -3,6 +3,28 @@
 ### Set Up
 ＊ 「go version go1.13.4」 confirms operation.
 
+#### docker
+1. clone this repo
+
+```sh
+git clone git@github.com:uma-co82/AtCoder-golang.git
+```
+
+2. docker
+
+```sh
+cd ${thisrepo}
+docker build -t atcoder build
+```
+
+3. run
+
+```sh
+docker container run atcoder
+```
+
+#### local set up
+
 1. go get this repo
 
 ```shell
@@ -10,8 +32,8 @@ go get -u github.com/uma-co82/AtCoder-golang
 cd $GOPATH/src/github.com/uma-co82/AtCoder-golang
 go run test.go
 ```
-
 If ok returns, it is a success
+
 
 ### [Happy Birthday!](https://atcoder.jp/contests/abc100/tasks/abc100_a)
 
