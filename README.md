@@ -7,8 +7,11 @@
 
 ```shell
 go get -u github.com/uma-co82/AtCoder-golang
+cd $GOPATH/src/github.com/uma-co82/AtCoder-golang
+go run test.go
 ```
-＊ At this time, it is said that 「package github.com/uma-co82/AtCoder-golang: no Go files in...」 , but it can be ignored.
+
+If ok returns, it is a success
 
 ### [Happy Birthday!](https://atcoder.jp/contests/abc100/tasks/abc100_a)
 
