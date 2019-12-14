@@ -76,9 +76,6 @@ func Of(valueOfN, valueOfM int64, valueOfA []int64) error {
 		return result8[i] > result8[j]
 	})
 
-	fmt.Println("result")
-	fmt.Println(result)
-
 	answer := result[:valueOfM]
 	answer2 := result2[:valueOfM]
 	answer3 := result3[:valueOfM]
@@ -137,7 +134,7 @@ func Of(valueOfN, valueOfM int64, valueOfA []int64) error {
 		return buz[i] > buz[j]
 	})
 
-	fmt.Println(buz[0])
+	fmt.Printf("A: %d", buz[0])
 	return nil
 }
 
