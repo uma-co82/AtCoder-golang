@@ -1,6 +1,6 @@
 # AtCoder-golang  ([abc100](https://atcoder.jp/contests/abc100/tasks)-answers)
 
-## Set Up
+### Set Up
 ＊ 「go version go1.13.4 darwin/amd64」 confirms operation.
 
 1. go get this repo
