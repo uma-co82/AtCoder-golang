@@ -12,10 +12,10 @@ func ArgumentValidate(args []string, argsCount int) ([]int, error) {
 	var numbers []int
 
 	if len(args) <= 0 {
-		err := pkg.NewError("引数を入力して下さい")
+		err := NewError("引数を入力して下さい")
 		return nil, err
 	}
-	
+
 	if len(args) < argsCount {
 		return nil, NewError(fmt.Sprintf("引数が足りません%d個入力して下さい", argsCount))
 	}
